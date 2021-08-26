@@ -1,0 +1,76 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 2rem;
+    background-color: black;
+    color: white;
+}
+.parent{
+    font-size: 1.6rem;
+    font-family: 'Raleway',sans-serif;
+    display: flex;
+    justify-content: space-between;
+}
+.parent a{
+    color: white;
+    text-decoration: none;
+}
+.parent a:hover{
+    text-shadow: 0px 10px 10px white;
+}
+.img-container{
+    display: inline-block;
+    width: 32rem;
+    height: 20rem;
+}
+.hero-section{
+    display: flex;
+    padding-top: 6rem;
+}
+.name{
+    animation: moveInFromRight 2s;
+    font-size: 4rem;
+    font-family: 'Montserrat', sans-serif;
+    position: relative;
+}
+.first,
+.last {
+    position: absolute;
+}
+.first {
+    left: -2rem;
+    top: -6rem;
+}
+@keyframes moveInFromRight {
+    0% {
+        transform: translateX(400px) scale(4);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+@media only screen and (max-width: 768px){
+ .parent{
+    justify-content: space-around;
+    padding-left: 1.5px;
+    font-size: 1.35rem;
+ }
+ body{
+     padding-top: 3rem;
+     padding-left: 1rem;
+ }
+ .img-container{
+     width: 10rem;
+     height: 15rem;
+ }
+ .name{
+    font-size: 2.7rem;
+ }
+.hero-section{
+    padding-top: 8rem;
+}
+}
